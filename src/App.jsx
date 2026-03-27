@@ -6,6 +6,7 @@ import { weatherforcastApi } from './api/weatherforcast'
 import './App.css'
 import { categoryApi } from './api/category'
 import { Button } from './components/ui/button'
+import { ArrowUpIcon } from "lucide-react"
 
 function App() {
   const [weatherData, setWeatherData] = useState("");
@@ -40,12 +41,19 @@ alert('Button clicked!!!!!!');
 
   return (
     <>
-      <h1>Rahul Lama React Application</h1>
+      {/* <h1>Rahul Lama React Application</h1>
       <p>Weather data:{weatherData}</p>
       <br/>
       <br/>
       <p>Category data: {category}</p>
-      <Button onClick={handleClick}>Click Me</Button>
+      <Button onClick={handleClick}>Click Me</Button> */}
+
+      <div className="flex flex-wrap items-center gap-2 md:flex-row">
+      <Button onClick={handleClick} variant="outline">Button</Button>
+      <Button variant="outline" size="icon" aria-label="Submit">
+        <ArrowUpIcon />
+      </Button>
+    </div>
     </>
   )
 }
